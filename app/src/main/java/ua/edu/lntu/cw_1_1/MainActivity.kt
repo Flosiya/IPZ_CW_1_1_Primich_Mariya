@@ -9,8 +9,10 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.sp
 import ua.edu.lntu.cw_1_1.ui.theme.IPZ_CW_1_1_Primich_MariyaTheme
 
 class MainActivity : ComponentActivity() {
@@ -32,11 +34,14 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Box(modifier = Modifier.fillMaxSize()){
+    Box(modifier = Modifier.fillMaxSize(),
+        contentAlignment = Alignment.Center
+    ){
         Text(
             text = "Примич Марія",
-            modifier = modifier
-            )
+            modifier = modifier,
+            fontSize = 30.sp
+        )
     }
 
 }

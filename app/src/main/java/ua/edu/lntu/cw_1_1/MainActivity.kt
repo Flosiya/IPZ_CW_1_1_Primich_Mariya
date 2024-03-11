@@ -32,12 +32,13 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
-        text = "Hii $name!",
-        modifier = modifier
+        text = "Примич Марія",
+        modifier = modifier,
+
     )
 }
 
-@Preview(showBackground = true)
+@Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun GreetingPreview() {
     IPZ_CW_1_1_Primich_MariyaTheme {

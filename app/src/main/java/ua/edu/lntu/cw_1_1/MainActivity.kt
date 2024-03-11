@@ -3,6 +3,7 @@ package ua.edu.lntu.cw_1_1
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -31,11 +32,13 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Примич Марія",
-        modifier = modifier,
+    Box(modifier = Modifier.fillMaxSize()){
+        Text(
+            text = "Примич Марія",
+            modifier = modifier
+            )
+    }
 
-    )
 }
 
 @Preview(showBackground = true, showSystemUi = true)

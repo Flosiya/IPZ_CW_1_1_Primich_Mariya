@@ -28,6 +28,11 @@ class MainActivity : ComponentActivity() {
                         name = "Примич Марія",
                         subtitle = "Старанно виконує"
                     )
+                    ContactList(
+                        number = "+00000000",
+                        email = "mashame@gmail.com",
+                        link = "@MashaM"
+                    )
                 }
             }
         }
@@ -53,6 +58,34 @@ fun GreetingWithSubtitle(name: String, subtitle: String) {
     }
 }
 
+@Composable
+fun ContactList(number: String, email: String, link:String) {
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Bottom,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text(
+            text = number,
+            fontSize = 20.sp
+        )
+        Spacer(modifier = Modifier.height(5.dp))
+        Text(
+            text = email,
+            fontSize = 20.sp
+        )
+        Spacer(modifier = Modifier.height(5.dp))
+        Text(
+            text = link,
+            fontSize = 20.sp
+        )
+    }
+}
+
+fun Column(fillMaxSize: Modifier, verticalArrangement: Arrangement.Horizontal, horizontalAlignment: Alignment.Horizontal, content: ColumnScope.() -> Unit) {
+
+}
+
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun GreetingPreview() {
@@ -60,6 +93,11 @@ fun GreetingPreview() {
         GreetingWithSubtitle(
             name = "Примич Марія",
             subtitle = "Старанно виконує"
+        )
+        ContactList(
+            number = "+00000000",
+            email = "mashame@gmail.com",
+            link = "@MashaM"
         )
     }
 }
